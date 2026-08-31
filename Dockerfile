@@ -20,6 +20,7 @@ RUN npm ci --omit=dev
 
 COPY --from=build /app/dist/ dist/
 COPY bin/ bin/
+COPY bin/ bin/
 
 EXPOSE 3000
 
