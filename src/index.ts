@@ -1,5 +1,6 @@
 import { FastMCP } from "fastmcp";
 import { registerDisclosureTools } from "./tools/disclosure.js";
+import { registerDocumentTools } from "./tools/document.js";
 import { registerFinancialTools } from "./tools/financial.js";
 import { ensureCorpCodes } from "./utils/corp-code.js";
 
@@ -16,6 +17,7 @@ const server = new FastMCP({
 
 registerDisclosureTools(server);
 registerFinancialTools(server);
+registerDocumentTools(server);
 
 const port = process.env.PORT ? Number(process.env.PORT) : undefined;
 
